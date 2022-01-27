@@ -1,0 +1,42 @@
+﻿@model IvonneManagement.Models.RentaParqueo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RentaParqueo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Monto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Inquilino)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Inquilino.Nombre) , @Html.DisplayFor(model => model.Inquilino.Apellidos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apartamento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apartamento.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
